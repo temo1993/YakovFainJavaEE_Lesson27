@@ -11,7 +11,7 @@
   <jsp:useBean id="stock" class="lesson27.tryit.Stock" />
   <jsp:setProperty property="*" name="stock" />
   <%!StockPriceGenerator stockServer = new StockPriceGenerator();%>
-	
+	<% stock.setSymbol("AAPL");%>
    Symbol: <%=stock.getSymbol()%>
    Price: <%=stockServer.getPrice(stock.getSymbol())%>
 </body>
